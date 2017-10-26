@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="产品设计,Facebook,脸书,交互设计," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="尼龙扣-Nilock" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="写在前面的话：Reactions是脸书一个耗时一年多的项目，这个功能的改动将会涉及到脸书的全部用户。在用户量异常庞大的产品之上做如此重大的功能更新，任何一个公司都会谨慎对待。此文由脸书的产品设计师Geoff Teehan发布于Medium，分享了Reactions整个的设计过程，让我们可以学习到其中的方法论。      译文较长，遂在正文之前附上精简的版本。 精简版  用户说点赞不够用了，我们也发">
+<meta name="keywords" content="产品设计,Facebook,脸书,交互设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reactions：生活不仅仅是点赞（1）">
+<meta property="og:url" content="http://yoursite.com/2016/03/17/2016-03-17-Reactions：生活不仅仅是点赞（1）-3/index.html">
+<meta property="og:site_name" content="尼龙扣-Nilock">
+<meta property="og:description" content="写在前面的话：Reactions是脸书一个耗时一年多的项目，这个功能的改动将会涉及到脸书的全部用户。在用户量异常庞大的产品之上做如此重大的功能更新，任何一个公司都会谨慎对待。此文由脸书的产品设计师Geoff Teehan发布于Medium，分享了Reactions整个的设计过程，让我们可以学习到其中的方法论。      译文较长，遂在正文之前附上精简的版本。 精简版  用户说点赞不够用了，我们也发">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2016/03/17/2016-03-17-Reactions：生活不仅仅是点赞（1）-3/1*bxBW7OUx-K9qMUBr-p5UFQ.gif">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*taCL0Uzum48nbpJeCV2uvw.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*H5JeM_A7WOd8LiQVzB9EQw.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*JP44FAPWzQgGWjlgFR4Z5g.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*MASApe6ftr9CeeZukCDU3A.png">
+<meta property="og:updated_time" content="2017-10-26T03:24:52.807Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Reactions：生活不仅仅是点赞（1）">
+<meta name="twitter:description" content="写在前面的话：Reactions是脸书一个耗时一年多的项目，这个功能的改动将会涉及到脸书的全部用户。在用户量异常庞大的产品之上做如此重大的功能更新，任何一个公司都会谨慎对待。此文由脸书的产品设计师Geoff Teehan发布于Medium，分享了Reactions整个的设计过程，让我们可以学习到其中的方法论。      译文较长，遂在正文之前附上精简的版本。 精简版  用户说点赞不够用了，我们也发">
+<meta name="twitter:image" content="http://yoursite.com/2016/03/17/2016-03-17-Reactions：生活不仅仅是点赞（1）-3/1*bxBW7OUx-K9qMUBr-p5UFQ.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/03/17/2016-03-17-Reactions：生活不仅仅是点赞（1）-3/"/>
+
+
+
+
+
+  <title>Reactions：生活不仅仅是点赞（1） | 尼龙扣-Nilock</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">尼龙扣-Nilock</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">左撇子和右撇子的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/17/2016-03-17-Reactions：生活不仅仅是点赞（1）-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="左撇子&右撇子">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="尼龙扣-Nilock">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Reactions：生活不仅仅是点赞（1）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-17T15:20:05+08:00">
+                2016-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>写在前面的话：Reactions是脸书一个耗时一年多的项目，这个功能的改动将会涉及到脸书的全部用户。在用户量异常庞大的产品之上做如此重大的功能更新，任何一个公司都会谨慎对待。此文由脸书的产品设计师<a href="https://medium.com/@gt" target="_blank" rel="external">Geoff Teehan</a>发布于Medium，分享了Reactions整个的设计过程，让我们可以学习到其中的方法论。  </p>
+<p><img src="./1*bxBW7OUx-K9qMUBr-p5UFQ.gif" alt="">  </p>
+<p>译文较长，遂在正文之前附上精简的版本。</p>
+<p><strong>精简版</strong></p>
+<ol>
+<li><p>用户说点赞不够用了，我们也发现了这点，扎老板说组建个团队吧；</p>
+</li>
+<li><p>分析问题、预知风险：如何简单易用？如何让用户最好的接受？如何跨平台跨设备运行？等等……</p>
+</li>
+<li><p>分解问题：①除了点赞还要增添哪些Reactions，②怎么使用Reactions；</p>
+</li>
+<li><p>设计原则：①全球通用/国际化，②Reactions是广泛使用且富有表达的；</p>
+</li>
+<li><p>研究用户使用最多的表情贴纸以及信息流中的短评，以帮助增添哪些Reactions；</p>
+</li>
+<li><p>研究并测试Reactions使用什么样的图形样式；</p>
+</li>
+<li><p>Reactions作为一个整体系统的原则：①Reactions是点赞的扩展，②不能增加已有操作的难度；</p>
+</li>
+<li><p>测试并迭代用户使用Reactions的方案；</p>
+</li>
+<li><p>确定如何在信息流中展示Reactions；</p>
+</li>
+<li><p>接近一年的工作及几个月的测试，最终发布Reactions。</p>
+</li>
+</ol>
+<p>——下面进入正文——</p>
+<p>我在脸书分享生活中的点滴，不论是庆祝坚持练习瑜伽60天，还是哀悼逝去的亲人。只是想要一种简单的方式，来表达我们的喜爱，或者当生活出现转折的时候表达同情。</p>
+<p>2009年，脸书推出“点赞”功能，用户可以用它对朋友发布的内容作出反应，“点赞”大受欢迎。在浏览信息流的同时，轻点大拇哥就能让朋友感知到你。</p>
+<p><strong>是时候超越点赞了</strong></p>
+<p>用户告诉我们，他们希望在脸书里有更多的方式来表达自我。大约一年前，Mark组建了一个团队，来严肃的思考如何让“点赞”变得更丰富。大家很兴奋，因为不是每天都有这样的机会，做如此重要的一项功能。</p>
+<p>我们一开始就知道这是个极具挑战的项目，如何跨平台、跨设备运行就是最显而易见的一个。再比如，我们花费很多精力打磨点赞、评论、分享，所以现在才如此易用，任何改动都会影响众多用户的行为。如何精心策划才能让用户觉得所做的改动如此自然，从而不干扰脸书上的任何用户。</p>
+<p>还有其他问题：Reactions是怎样的？如何让全球的用户都能理解？如何让用户最好的接受Reactions？如何让用户简单的使用Reactions？在解决这些复杂问题的同时，还要确保“点赞”机制的简单易用。</p>
+<blockquote>
+<p><strong>像所有优秀的设计一样，达成简单方案的过程都是复杂的。</strong></p>
+</blockquote>
+<p>善解人意如此重要，所以我们花费大量的时间来做了很多次迭代。那么问题来了，如何让用户在更好更丰富的表达自己的同时，使Reactions通用。</p>
+<p>我们将之分解为两个问题并同时进行：</p>
+<ol>
+<li><p><strong>除了点赞还加入什么Reactions</strong></p>
+</li>
+<li><p><strong>怎么使用与展示</strong></p>
+</li>
+</ol>
+<p>在项目行进的时候我们把一些关键原则作为我们的操作手册，用以帮助团队进行决策。虽然它们不能告诉我们最终的方案是什么，但是能提示我们什么不是，最终引导大家向前。</p>
+<p>这些原则是通过真实的研究与数据得出的，还有脸书才华横溢行业精英的直觉与知识。如此，组建的团队里有研究专家、内容策略专家、工程师还有设计团队：Andy Chung，Brandon Walkin 与 Brian Frick。</p>
+<p><strong>The Reactions</strong></p>
+<p>下面是我们一直遵守的设计原则：</p>
+<ol>
+<li><p><strong>Reactions是全球通用的</strong>。这样更多的人才能连接与交流。</p>
+</li>
+<li><p><strong>Reactions是广泛使用与富有表达的</strong>。人们像真实生活中一样来表达自己。</p>
+</li>
+</ol>
+<p>首先需要考虑包含多少Reactions。这似乎是一个简单的任务：在点赞按钮旁边放一个大拇哥向下的表情不就好了。然而并不是这么简单，用户需要更复杂更丰富的表达。人们在日常生活中可不是用“二进制”式的喜欢或不喜欢来对事物作出反应。</p>
+<p>难道要向Emoji一样让用户在数百种Reactions中做选择？多半也不是。一条被留下很多类型Reactions的Po文在信息流中将难以阅读。此外，通用性随着表情数量的增多而下降。</p>
+<p>在一年多的时间里，我们研究探索什么类型的表情最具吸引力。</p>
+<p><strong>表情贴纸</strong></p>
+<p>我们研究了脸书中使用最多的表情贴纸与Emoji，来了解人们使用什么类型的“Reactions”。</p>
+<p><strong><img src="https://cdn-images-1.medium.com/max/800/1*taCL0Uzum48nbpJeCV2uvw.png" alt="">  
+</strong></p>
+<p><strong>表情贴纸最常用的搜索项</strong></p>
+<p>研究了用户在搜索哪些表情贴纸：</p>
+<p><strong><img src="https://cdn-images-1.medium.com/max/800/1*H5JeM_A7WOd8LiQVzB9EQw.png" alt="">  
+</strong></p>
+<p><strong>短评排行榜</strong></p>
+<p>还研究了全球常用的短评。让我们了解人们表达自己的特定语言，并帮助我们更全面的了解在什么情境下使用这些短评。下面是美国短评的样本：</p>
+<p><strong><img src="https://cdn-images-1.medium.com/max/800/1*JP44FAPWzQgGWjlgFR4Z5g.png" alt="">  
+</strong></p>
+<p>除了分析样本，我们与国际化团队合作，跟不同国家的用户交谈。之后我们得到了一个凝缩的列表：</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*MASApe6ftr9CeeZukCDU3A.png" alt="">  </p>
+<p>你可能注意到，最终发布的Reactions中并不包含“Confused”与“Yay”。“Confused”在测试中是使用最少的，反而让用户对“Reactions”的认知负担加重。“Yay”也很难做出区分，不够简单与国际化，并且同“Haha”、“Like”重复。移除这两个Reactions后让系统更整体。</p>
+<p>未完待续</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品设计/" rel="tag"># 产品设计</a>
+          
+            <a href="/tags/Facebook/" rel="tag"># Facebook</a>
+          
+            <a href="/tags/脸书/" rel="tag"># 脸书</a>
+          
+            <a href="/tags/交互设计/" rel="tag"># 交互设计</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/02/20/2016-02-20-北京风很大-4/" rel="next" title="北京风很大">
+                <i class="fa fa-chevron-left"></i> 北京风很大
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/18/2016-03-18-Reactions：生活不仅仅是点赞（2）-2/" rel="prev" title="Reactions：生活不仅仅是点赞（2）">
+                Reactions：生活不仅仅是点赞（2） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">左撇子&右撇子</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">356</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">187</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">左撇子&右撇子</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

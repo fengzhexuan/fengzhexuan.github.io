@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="undefined," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="尼龙扣-Nilock" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="无障碍访问相关的内容比较少见，就自己的项目经验来看，这点在实际的项目应用中考虑甚少。翻译这篇长文的时候纠结于如何翻译Accessibility一词，它的字面意思是无障碍访问，印象iOS设置中有一项是辅助功能，其中包含的功能设置都与Accessibility相关，考虑到苹果的翻译是为了普通用户，而这篇文章的受众是互联网从业人员索性使用无障碍访问。 ———————————-译文分割线———————">
+<meta name="keywords" content="undefined">
+<meta property="og:type" content="article">
+<meta property="og:title" content="７条无障碍访问设计准则（上）">
+<meta property="og:url" content="http://yoursite.com/2015/10/04/2015-10-04-７条无障碍访问设计准则（上）-15/index.html">
+<meta property="og:site_name" content="尼龙扣-Nilock">
+<meta property="og:description" content="无障碍访问相关的内容比较少见，就自己的项目经验来看，这点在实际的项目应用中考虑甚少。翻译这篇长文的时候纠结于如何翻译Accessibility一词，它的字面意思是无障碍访问，印象iOS设置中有一项是辅助功能，其中包含的功能设置都与Accessibility相关，考虑到苹果的翻译是为了普通用户，而这篇文章的受众是互联网从业人员索性使用无障碍访问。 ———————————-译文分割线———————">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2015/10/04/2015-10-04-７条无障碍访问设计准则（上）-15/0*bhC1d9AMLq7EA4bv.">
+<meta property="og:image" content="https://d262ilb51hltx0.cloudfront.net/max/1501/0*Y8EzNegFamAO5_zV.">
+<meta property="og:image" content="https://d262ilb51hltx0.cloudfront.net/max/800/0*d3Y0b1mb7p0P10iO.">
+<meta property="og:image" content="https://d262ilb51hltx0.cloudfront.net/max/800/0*gjAl4cxEGBazbYNY.">
+<meta property="og:image" content="https://d262ilb51hltx0.cloudfront.net/max/800/1*rlBm6vidbbXu26efnYZWqA.png">
+<meta property="og:image" content="https://d262ilb51hltx0.cloudfront.net/max/800/1*rOaDGp5GtLG8Fn79pa34Gg.png">
+<meta property="og:image" content="https://d262ilb51hltx0.cloudfront.net/max/800/0*tvvQcCsqdHROnBzK.">
+<meta property="og:image" content="https://d262ilb51hltx0.cloudfront.net/max/985/0*Y0AhWKKQ3mbgUzWs.">
+<meta property="og:image" content="https://d262ilb51hltx0.cloudfront.net/max/800/1*o6kxU1Gm4SaOPpTmhPOg0A.png">
+<meta property="og:updated_time" content="2017-10-26T03:24:52.808Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="７条无障碍访问设计准则（上）">
+<meta name="twitter:description" content="无障碍访问相关的内容比较少见，就自己的项目经验来看，这点在实际的项目应用中考虑甚少。翻译这篇长文的时候纠结于如何翻译Accessibility一词，它的字面意思是无障碍访问，印象iOS设置中有一项是辅助功能，其中包含的功能设置都与Accessibility相关，考虑到苹果的翻译是为了普通用户，而这篇文章的受众是互联网从业人员索性使用无障碍访问。 ———————————-译文分割线———————">
+<meta name="twitter:image" content="http://yoursite.com/2015/10/04/2015-10-04-７条无障碍访问设计准则（上）-15/0*bhC1d9AMLq7EA4bv.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/10/04/2015-10-04-７条无障碍访问设计准则（上）-15/"/>
+
+
+
+
+
+  <title>７条无障碍访问设计准则（上） | 尼龙扣-Nilock</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">尼龙扣-Nilock</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">左撇子和右撇子的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/10/04/2015-10-04-７条无障碍访问设计准则（上）-15/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="左撇子&右撇子">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="尼龙扣-Nilock">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">７条无障碍访问设计准则（上）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-04T11:37:35+08:00">
+                2015-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>　　无障碍访问相关的内容比较少见，就自己的项目经验来看，这点在实际的项目应用中考虑甚少。翻译这篇长文的时候纠结于如何翻译Accessibility一词，它的字面意思是无障碍访问，印象iOS设置中有一项是辅助功能，其中包含的功能设置都与Accessibility相关，考虑到苹果的翻译是为了普通用户，而这篇文章的受众是互联网从业人员索性使用无障碍访问。</p>
+<p>———————————-译文分割线———————————-</p>
+<p>　　无障碍访问让生理有障碍人士感知、理解、导航、互动并有助于网络。想象一下，一个世界里，开发者们懂无障碍访问。你设计它，他们构建它…完美。在这个世界上，只有设计本身会导致残障人士有使用产品的麻烦。文章中介绍的这些准则将涵盖Web Consortium可访问性指南2.0与第508条的主要内容，以使你的产品在无障碍访问方面触达及格线，剩下的事情就交给开发与质量测试。</p>
+<p>1.无障碍访问不是创新的绊脚石</p>
+<p>　　遵循准则不是让你做一个丑陋、无聊、杂乱的产品。在设计时考虑这些约束，会启发你更多新的探索思路，从而为所有用户提供更好的产品。<strong>友情提醒：在阅读这些准则时，考虑我们不是为设计师同行进行设计。</strong>  </p>
+<p><img src="./0*bhC1d9AMLq7EA4bv." alt=""></p>
+<p>　　为使用你产品的多层次用户设计。包括盲人、色盲、弱视，聋人或听力障碍者，暂时或永久性行动障碍者，抑或认知障碍人士。不论年轻年长，专业或普通，都能享受优质体验。  </p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/1501/0*Y8EzNegFamAO5_zV." alt=""></p>
+<p><strong>　　像其他设计约束一样拥抱这些易用性原则，他们属于创造牛逼产品的一部分挑战。</strong>2.不要把颜色作为传达信息的唯一视觉方法</p>
+<p>　　帮助不能或者有困难分辨不同颜色的用户。包括色盲（12个男人中有1个，200个女人中有一个），弱视（30人中有一个），盲人（188人中有一个）。</p>
+<p><strong>　　用颜色高亮或补充那些已经在视觉上明显的设计。</strong></p>
+<p>　　下面是一幅只用黑白显示的图片，有多少字段是处于错误的状态呢？</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/0*d3Y0b1mb7p0P10iO." alt=""></p>
+<p>　　绝大多数人的答案是一个，“human verification”字段。那是因为有一个三角形的警示标志显示字段内容错误。</p>
+<p>　　那么再回过头来看看彩色的截图，你认为有多少错误字段呢？</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/0*gjAl4cxEGBazbYNY." alt=""></p>
+<p>　　所有人的答案变成了四个。</p>
+<p>　　有多种方法能让这个表单在视觉上体现出无障碍访问。可以在所有错误字段都展示那个红色的错误图标。可以用文字来解释字段为什么错误。可以用tooltip，加粗的边框、加粗的字体、下划线、斜体等等。有无穷的选择，<strong>不过唯一的准则是别只用颜色</strong>。</p>
+<p>3.确保文字与背景之间有充足的对比度</p>
+<p>　　<a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" target="_blank" rel="external">根据WCAG</a>，文字与其背景之间的对比度至少为4.5:1，如果字体大小为24px或19px粗体，这个最小值可降至3:1。</p>
+<p>　　这条准则可保证弱视、色盲、抑或更严重的视觉问题人士能够认读屏幕上的文字。</p>
+<p>　　也就是说24px或19px粗体或更大的文字，在白色背景上可使用最浅的灰色是#959595。</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*rlBm6vidbbXu26efnYZWqA.png" alt=""></p>
+<p>　　对于更小的文字，在白色背景上可以使用最浅的灰色色值为#767676，在灰色背景上的文字需要更偏向黑色。</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*rOaDGp5GtLG8Fn79pa34Gg.png" alt=""></p>
+<p>　　<a href="http://colorsafe.co/" target="_blank" rel="external">Color safe</a>是一款给力的工具，可以帮你找到无障碍访问的配色。<a href="http://webaim.org/resources/contrastchecker/" target="_blank" rel="external">WebAIM’s Color Contrast Checker</a>，可以用来检测已经选定的颜色。</p>
+<p>　　不过Logo或处于不可点击状态是例外情况，包括按钮菜单选项。而占位符或表单字段内的提示文字不属于例外情况。</p>
+<p>　　Medium的这个例子是没有达到及格线的，只有大大的字母“M”符合准则。</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/0*tvvQcCsqdHROnBzK." alt=""></p>
+<p>　　BBC网站是一个很好的例子，它能轻易的通过对比度测试，因为最浅的的灰色色值恰好是#767676。</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/985/0*Y0AhWKKQ3mbgUzWs." alt=""></p>
+<p>　　我很乐意跟Salesforce的设计团队合作，因为他们在移动产品上拥抱对比度这一准则。</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*o6kxU1Gm4SaOPpTmhPOg0A.png" alt=""></p>
+<p>　　用高对比度的颜色组合进行探索。通过这些练习的设计师经常惊讶于他们有多偏好高对比度设计。我确信你能找到合适的对比度来显示文字而不会对产品造成损伤。</p>
+<p>　　在<a href="https://medium.com/salesforce-ux/projectors-dont-lie-b85ef628b04" target="_blank" rel="external">Projectors Don’t Lie</a>与<a href="https://medium.com/salesforce-ux/accessible-interface-design-d80e95cbb2c1" target="_blank" rel="external">Accessible Interface Design</a>查看更多关于颜色对比度的更多相关内容。</p>
+<p>　　未完待续。</p>
+<blockquote>
+<p>原文2015年4月29日发布于旧博客</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/undefined/" rel="tag"># undefined</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/04/2015-10-04-让动画隐形（Invisible Animation）-16/" rel="next" title="让动画隐形（Invisible Animation）">
+                <i class="fa fa-chevron-left"></i> 让动画隐形（Invisible Animation）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/04/2015-10-04-回来了-14/" rel="prev" title="回来了">
+                回来了 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">左撇子&右撇子</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">356</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">187</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">左撇子&右撇子</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

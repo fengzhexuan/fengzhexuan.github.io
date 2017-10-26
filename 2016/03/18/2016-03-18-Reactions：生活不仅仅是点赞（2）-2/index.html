@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="产品设计,Facebook,脸书,交互设计,Reactions," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="尼龙扣-Nilock" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="接上文 Reactions：生活不仅仅是点赞（1） 图形 另一个棘手的问题是，Reactions该使用怎样的图形。我们想创造一种独一无二、简单通用的图形，并且能优雅的融入整个生态系统。下面是最初的设计方向：    最初的图形设计，在小尺寸下不能起到很好的沟通作用，看起来更像是系统的占位符，不过到了该迭代的时候了。 在互相独立且能够传递意欲表情的前提下，什么样的风格才是最合适的呢？这时候也遇到了重叠">
+<meta name="keywords" content="产品设计,Facebook,脸书,交互设计,Reactions">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reactions：生活不仅仅是点赞（2）">
+<meta property="og:url" content="http://yoursite.com/2016/03/18/2016-03-18-Reactions：生活不仅仅是点赞（2）-2/index.html">
+<meta property="og:site_name" content="尼龙扣-Nilock">
+<meta property="og:description" content="接上文 Reactions：生活不仅仅是点赞（1） 图形 另一个棘手的问题是，Reactions该使用怎样的图形。我们想创造一种独一无二、简单通用的图形，并且能优雅的融入整个生态系统。下面是最初的设计方向：    最初的图形设计，在小尺寸下不能起到很好的沟通作用，看起来更像是系统的占位符，不过到了该迭代的时候了。 在互相独立且能够传递意欲表情的前提下，什么样的风格才是最合适的呢？这时候也遇到了重叠">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2016/03/18/2016-03-18-Reactions：生活不仅仅是点赞（2）-2/1*uS1hmIsJ7gltTmFbQGRdEQ.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*ktIe5B5QKvVDaJ7zkMEcsQ.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*PCKe_76Wa_4VyE6VT8okLw.gif">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*3EEy3yvmqvPfbjIzLvKwNA.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*3_JKPjIQAJolLrQAFuxcxA.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*H4BuNh3RbYZzYxWXe_nIEw.png">
+<meta property="og:updated_time" content="2017-10-26T03:24:52.807Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Reactions：生活不仅仅是点赞（2）">
+<meta name="twitter:description" content="接上文 Reactions：生活不仅仅是点赞（1） 图形 另一个棘手的问题是，Reactions该使用怎样的图形。我们想创造一种独一无二、简单通用的图形，并且能优雅的融入整个生态系统。下面是最初的设计方向：    最初的图形设计，在小尺寸下不能起到很好的沟通作用，看起来更像是系统的占位符，不过到了该迭代的时候了。 在互相独立且能够传递意欲表情的前提下，什么样的风格才是最合适的呢？这时候也遇到了重叠">
+<meta name="twitter:image" content="http://yoursite.com/2016/03/18/2016-03-18-Reactions：生活不仅仅是点赞（2）-2/1*uS1hmIsJ7gltTmFbQGRdEQ.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/03/18/2016-03-18-Reactions：生活不仅仅是点赞（2）-2/"/>
+
+
+
+
+
+  <title>Reactions：生活不仅仅是点赞（2） | 尼龙扣-Nilock</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">尼龙扣-Nilock</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">左撇子和右撇子的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/18/2016-03-18-Reactions：生活不仅仅是点赞（2）-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="左撇子&右撇子">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="尼龙扣-Nilock">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Reactions：生活不仅仅是点赞（2）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-18T16:25:01+08:00">
+                2016-03-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>接上文 <a href="http://www.nilock.com/post/1d117be8_a347d3e" target="_blank" rel="external">Reactions：生活不仅仅是点赞（1）</a></p>
+<p><strong>图形</strong></p>
+<p>另一个棘手的问题是，Reactions该使用怎样的图形。我们想创造一种独一无二、简单通用的图形，并且能优雅的融入整个生态系统。下面是最初的设计方向：</p>
+<p><img src="./1*uS1hmIsJ7gltTmFbQGRdEQ.png" alt="">  </p>
+<p>最初的图形设计，在小尺寸下不能起到很好的沟通作用，看起来更像是系统的占位符，不过到了该迭代的时候了。</p>
+<p>在互相独立且能够传递意欲表情的前提下，什么样的风格才是最合适的呢？这时候也遇到了重叠的问题，因为最小的设计改动可能就会让某个Reaction与另一个无法区别，甚至完全无法体现所要表达的情感。“Wow”可能忽然就变成“Yay”，“Yay”调整一下微笑的弧度或眼睛的角度又会变成“Haha”。</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*ktIe5B5QKvVDaJ7zkMEcsQ.png" alt="">  </p>
+<p>我们还尝试了是否使用标签。标签有助于定义“Reactions”，而且方便国际化。它们能被普遍理解，如果一位日本朋友对你的Po文做出“React”，你们都得知道那是什么意思。要理解这一点，我们与国际化团队以及非语言交流的专家密切合作，做了各种研究，并在不同的国家进行早期版本的测试。</p>
+<p>早期版本的Reactions是静态的，我们也确信动画能让它们更丰富。动画设计师让它们动了起来，同时设计师与工程师都在考虑如何高性能的实现。设计师用伪代码描述每个“Reaction”，然后工程师通过伪代码高精度的还原了设计师想要的效果，并且如黄油般顺滑。</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*PCKe_76Wa_4VyE6VT8okLw.gif" alt="">  </p>
+<p>当加上动画效果后，我们觉得每个“Reaction”同时运动会让用户的眼睛过载。所以最初，当手指划过某个“Reaction”时该“Reaction”开始播放动画，其余则保持静止。在某次评审时（大项目通常给Zuck汇报进度），Zuck说如果快速划过“Reaction”时，它们也会同时运动。他建议，当面板出现时让每个“Reaction”同时运动。最后我们采用了这种方式，谢谢Zuck。</p>
+<p><strong>整体方案</strong></p>
+<p>如果没有大家一致坚守的原则，Reactions将是一个无法扩展的复杂系统。看看这些原则是什么：</p>
+<ol>
+<li><p>Reactions是点赞按钮的扩展。点赞、评论与分享在脸书上如此普及，再添加一个选择将会变得复杂。</p>
+</li>
+<li><p>不能让已有的操作增加难度。在增加这项特性的后，不能干扰已有的用户。或者说，要让这项功能像点赞一样简单，点一下代表你喜欢这个Po文。</p>
+</li>
+</ol>
+<p><strong>使用Reactions</strong>  </p>
+<p>最初设计输入机制的时候我们并不知道将会有多少个Reaction，一些早期的研究只给了大概的数字，可能在5~10之间。作为压力测试，我们设计了一个最多可以支持15个Reaction的方案，毕竟删减可比扩展容易。</p>
+<embed height="400" allowscriptaccess="always" width="480" quality="high" invokeurls="false" src="http://player.youku.com/player.php/sid/XMTQ5MzQxMjkwNA==/v.swf" type="application/x-shockwave-flash" wmode="transparent">
+
+<p>像这样的早期概念不能告诉我们什么是对的，但通常能告诉我们哪些不对。它们显示出一些我们不知道的东西或者更多。</p>
+<p>上面的尝试帮我们快速得到广泛的反馈，暴露了一些问题。换句话说，我们要拿出一个能解决以下问题的方案：</p>
+<ul>
+<li><p>Reactions面板在屏幕上方时会被截断；</p>
+</li>
+<li><p>除了大面积的触控区域，用户经常把手指划到标签上；</p>
+</li>
+<li><p>文字标签读着费力，并且增加了国际化的难度；</p>
+</li>
+<li><p>线条状的图形在大尺寸下看起来不错，但缩小后却难以分辨——用户如何在信息流中阅读Reactions就要考虑这点；</p>
+</li>
+<li><p>一些用户能触发滑动操作，但会抬起手指去点击某个Reaction，这样导致了错误的输入；</p>
+</li>
+<li><p>Reactions数量过多时会显得冗余。</p>
+</li>
+</ul>
+<p>继续迭代。第一个原型通过手指在标签上滑动显示不同的Reaction，这样促使用户在决定使用哪个Reaction之前把所有的Reaction都预览一遍，费时费力。</p>
+<embed height="400" allowscriptaccess="always" width="480" quality="high" invokeurls="false" src="http://player.youku.com/player.php/sid/XMTQ5MzQxMzAyOA==/v.swf" type="application/x-shockwave-flash" wmode="transparent">
+
+<p>最终我们选择了dock模型，放弃了线条状图形的概念。这个方案中，用户能快速看到全部的Reaction。用人脸表情替换了文字，使整个系统更友好更方便国际化。此外还解决了早期概念遇到的其他问题。比如，界面进行了自适应，就不会超出屏幕范围。移动了标签的位置，这样不会被手指遮盖。最后，一旦dock被触发，滑动或点击操作都可以进行选择。</p>
+<p><strong>展示Reactions</strong></p>
+<p>只有点赞的世界很简单，直接告诉用户“17次赞”就足够了。这行文字展示在点赞、评论与分享按钮之上的一行空间内。在脸书内部我们称之为“Bling String”。如何展示“Reaction”需要重新思考，因为标示为“10次Reactions”并不能表达任何情绪，朋友对这条信息到底是觉得好笑、悲伤还是惊讶呢？我们要找到一个既能单独记录每种“Reaction”数量又能像点赞一样展示反馈总数的方案。</p>
+<p>最初尝试了一个明显的方案，并排展示了每种“Reaction”的数量。这个方案在Reaction种类较少的时候效果不错，不过一旦种类增加尤其是公众内容立即变得分崩离析。而且不知道反馈的总数。过去的“Bling String”只传递特别简单的信息，所以易于扫描与理解，在用户翻动内容时也不影响。</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*3EEy3yvmqvPfbjIzLvKwNA.png" alt="">  </p>
+<p>最初的方案：具有多类型Reaction的内容让人变得抓狂</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*3_JKPjIQAJolLrQAFuxcxA.png" alt="">  </p>
+<p>其他一些放弃的探索方案</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*H4BuNh3RbYZzYxWXe_nIEw.png" alt="">  </p>
+<p>最终采用的设计方案</p>
+<p>最终的设计方案展示了Top 3的Reaction，以及Reaction的总数。如此，用户能理解大多数人对这条消息是怎么样的反应，并且知道总数。此外，还展示了你的哪位密友对此做出了反应，这也是Reaction带来的副产品。点击这条文字就可以看到这条状态所有Reactions的详细信息。</p>
+<p><strong>最终的产品</strong></p>
+<p>接近一年的工作以及几个月的测试后，我们终于迎来了发布Reactions的激动时刻，也知道了不同国家与地区的人们是怎样使用的。是时候把Reactions推向全世界了，希望每个人都喜欢。</p>
+<p>任何的软件设计没有真正的完美，Reactions也不例外。我们将不断的迭代与改进，也希望这是脸书迈向更善解人意的一步。</p>
+<p><embed height="400" allowscriptaccess="always" width="480" quality="high" invokeurls="false" src="http://player.youku.com/player.php/sid/XMTQ5MzQxMjcxMg==/v.swf" type="application/x-shockwave-flash" wmode="transparent"><embed height="400" allowscriptaccess="always" width="480" quality="high" invokeurls="false" src="http://player.youku.com/player.php/sid/XMTQ5MzQxMTY1Mg==/v.swf" type="application/x-shockwave-flash" wmode="transparent"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品设计/" rel="tag"># 产品设计</a>
+          
+            <a href="/tags/Facebook/" rel="tag"># Facebook</a>
+          
+            <a href="/tags/脸书/" rel="tag"># 脸书</a>
+          
+            <a href="/tags/交互设计/" rel="tag"># 交互设计</a>
+          
+            <a href="/tags/Reactions/" rel="tag"># Reactions</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/17/2016-03-17-Reactions：生活不仅仅是点赞（1）-3/" rel="next" title="Reactions：生活不仅仅是点赞（1）">
+                <i class="fa fa-chevron-left"></i> Reactions：生活不仅仅是点赞（1）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/30/2016-04-30-【随机一图】2016-4-30-1/" rel="prev" title="【随机一图】2016-4-30">
+                【随机一图】2016-4-30 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">左撇子&右撇子</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">356</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">187</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">左撇子&右撇子</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

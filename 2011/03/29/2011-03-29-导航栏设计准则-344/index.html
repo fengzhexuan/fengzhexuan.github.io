@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="前端," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="尼龙扣-Nilock" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="本文翻译自Curing the Navigation-itis Syndrome。 　　网络中每天都有海量的内容被发布，随之而来的问题是如何对这些内容分类，而内容和分类最终将导致导航问题。有时，当导航有太多选项时将会是个令人头疼的问题。 　　所以，治疗导航栏综合症（cure the navigation-itis syndrome）是非常重要的，使得导航栏对用户友好并容易操作。    　　本文">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="导航栏设计准则">
+<meta property="og:url" content="http://yoursite.com/2011/03/29/2011-03-29-导航栏设计准则-344/index.html">
+<meta property="og:site_name" content="尼龙扣-Nilock">
+<meta property="og:description" content="本文翻译自Curing the Navigation-itis Syndrome。 　　网络中每天都有海量的内容被发布，随之而来的问题是如何对这些内容分类，而内容和分类最终将导致导航问题。有时，当导航有太多选项时将会是个令人头疼的问题。 　　所以，治疗导航栏综合症（cure the navigation-itis syndrome）是非常重要的，使得导航栏对用户友好并容易操作。    　　本文">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2011/03/29/2011-03-29-导航栏设计准则-344/navigationitis.jpg">
+<meta property="og:image" content="http://www.nilock.com/wp-content/uploads/2011/03/国家地理网站导航.jpg">
+<meta property="og:updated_time" content="2017-10-26T03:24:52.832Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="导航栏设计准则">
+<meta name="twitter:description" content="本文翻译自Curing the Navigation-itis Syndrome。 　　网络中每天都有海量的内容被发布，随之而来的问题是如何对这些内容分类，而内容和分类最终将导致导航问题。有时，当导航有太多选项时将会是个令人头疼的问题。 　　所以，治疗导航栏综合症（cure the navigation-itis syndrome）是非常重要的，使得导航栏对用户友好并容易操作。    　　本文">
+<meta name="twitter:image" content="http://yoursite.com/2011/03/29/2011-03-29-导航栏设计准则-344/navigationitis.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2011/03/29/2011-03-29-导航栏设计准则-344/"/>
+
+
+
+
+
+  <title>导航栏设计准则 | 尼龙扣-Nilock</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">尼龙扣-Nilock</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">左撇子和右撇子的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2011/03/29/2011-03-29-导航栏设计准则-344/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="左撇子&右撇子">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="尼龙扣-Nilock">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">导航栏设计准则</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-03-29T10:05:09+08:00">
+                2011-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>　　本文翻译自<a href="http://spyrestudios.com/curing-the-navigation-itis-syndrome/" target="_blank" rel="external">Curing the Navigation-itis Syndrome。</a></p>
+<p>　　<strong>网络中每天都有海量的内容被发布，随之而来的问题是如何对这些内容分类，而内容和分类最终将导致导航问题。有时，当导航有太多选项时将会是个令人头疼的问题。</strong></p>
+<p>　　所以，治疗导航栏综合症（cure the navigation-itis syndrome）是非常重要的，使得导航栏对用户友好并容易操作。</p>
+<p><img src="./navigationitis.jpg" alt="导航栏综合症" title="导航栏综合症">  </p>
+<p>　　本文提供了一些设计导航栏的技巧。帮助你解决导航问题并体统清晰的用户体验，并用真实的例子教你如何治愈导航炎综合症。</p>
+<p>　　但首先，是这些技巧。</p>
+<p>设计导航栏的技巧  </p>
+<p>　　当我们撰写这篇文章之前，Jon (SpyreStudios founder) 和我交换了一些想法，总结出了关于导航栏应该如何放置、如何作用和表现。</p>
+<p>1.坚持一个导航菜单  </p>
+<p>　　通常一个导航菜单就足够了。不要增加不必要的导航条，而用下拉菜单代替。</p>
+<p>2.清晰、简单、明显的菜单选项  </p>
+<p>　　使用清晰、简单易懂的文本，尽可能简单并能表达清楚。这样用户不会感到困惑，且知道他们点击的是什么。</p>
+<p>3.保持导航看起来是菜单  </p>
+<p>　　一个导航菜单应该看起来像一个导航菜单。没有必要重新发明轮子。如果没坏，就不要修。基本上，你的创意应该来自内容，而不是如何呈现内容。相比如何到达内容人们更关心内容本身。所以让人们通过一个不用大惊小怪、可立即识别的过程来得到它。</p>
+<p>4.不要使用多于两级的下拉菜单  </p>
+<p>　　不要使用多于两级的下拉菜单，除非特别必要。如果你需要使用多于三层的下拉菜单，那你可能需要重新返回绘图板。减少菜单项目——大胆裁员。你是否真的需要那两个分类或者页面，也许合二为一更好？这都是关于如何对你的内容做出更好的分类。</p>
+<p>5.下拉菜单中不要多于10-12个选项  </p>
+<p>　　切勿在下拉菜单中放置多于10-12个选项。如果这样打不到你的要求，请重回绘图板，像第4条中那样。</p>
+<p>6.最小化下拉菜单  </p>
+<p>　　将下拉选项保持在最小状态。如果可能，避免使用大型的下拉菜单。更多的选择往往意味着更少的动作。别让用户不知道如何如何在菜单中选择，结果导致用户离开网站。</p>
+<p>7.不要只往菜单上放一个图标  </p>
+<p>　　图标是很重要的，但是如果菜单上只有图标的话，不是每个人都了解图标的含义。三十岁的人会知道闪存的图标代表“保存”。而小孩儿可能会不明白这个含义。</p>
+<p>8.不要设计垂直导航栏  </p>
+<p>　　虽然设计一个垂直的导航栏没有那么难，但是在网页上使用水平导航栏是更加容易并且司空见惯的。垂直导航栏会很不方便，会让一部分用户望而却步，而且会浪费宝贵的屏幕空间。水平导航栏会为网页锦上添花，而垂直导航栏会给你的用户带来麻烦。另外，垂直导航栏会需要更多的空间来让自身变得醒目。这也因项目而异。</p>
+<p>9.让你的设计方便触摸屏用户使用  </p>
+<p>　　触摸屏技术已经被广泛采用，所以你要让自己的导航栏方便触摸屏电子产品（比如IPAD）用户的使用。尤其对于下拉菜单而言，让它们更加容易被点击，而不是只能使用光标停留。</p>
+<p>治愈“导航栏迷恋症”：一个实例  </p>
+<p>　　看看美国国家地理的网站，数一数这个网页有几个导航栏呢？</p>
+<p><img src="http://www.nilock.com/wp-content/uploads/2011/03/国家地理网站导航.jpg" alt="国家地理网站导航" title="国家地理网站导航">  </p>
+<p>　　有三个，是的！对于访客是不是有点多呢？如何避免在一个网页上使用三个导航条呢？事实上，把三个导航条合并成一个导航条也是可能的！</p>
+<p>1.设置下拉菜单  </p>
+<p>　　最最重要的是，这个三级菜单的次级菜单（第二级菜单和第三级菜单）可以放到下拉菜单中。这样既可以节省空间，又可以让用户的选择更加明了。比如说如果你对摄影感兴趣的话，你将鼠标悬浮便可以看到关于摄影的所有内容。</p>
+<p>2 把搜索框放入现有的导航栏  </p>
+<p>　　把搜索框单独拉出来是不合理的做法。如果把搜索框放进导航栏，可以节省更多的空间。这样做，呈现给用户单一又实用的导航栏。</p>
+<p>3 减少给用户的选择  </p>
+<p>　　从菜单中砍掉一部分内容会让你的导航栏既方便又实用。如果点击logo可以转到主页的时候还需要再单独做一个主页的链接吗？做次级菜单的时候也要考虑到这一点。</p>
+<p>解决导航问题，提供清晰的用户体验  </p>
+<p>　　如果用户不能访问到，有再好的内容也只是一文不值。好吧，他们最终将找到并访问它。但是很多用户会变得沮丧或者放弃并离开网站，如果他们不能轻易的找到或者因不必要的选择而不堪重负。所以，为什么不更好的提供便利。</p>
+<p>　　让用户方便使用和分享内容是治疗导航栏综合症的最好方法。解决了网站的导航问题能给用户提供更清晰的用户体验，让更多用户阅读使用并分享网站的内容而使你快乐。</p>
+<p>　　到你了：你学会如何治愈导航栏综合症了么？如果你有更好的技巧和准则，欢迎在下面的评论区域中分享。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2011/03/27/2011-03-27-逝去的南锣鼓巷-345/" rel="next" title="逝去的南锣鼓巷">
+                <i class="fa fa-chevron-left"></i> 逝去的南锣鼓巷
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2011/03/30/2011-03-30-【美图欣赏】来自Jessy Celeste Eykendorp的绝美照片-343/" rel="prev" title="【美图欣赏】来自Jessy Celeste Eykendorp的绝美照片">
+                【美图欣赏】来自Jessy Celeste Eykendorp的绝美照片 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">左撇子&右撇子</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">356</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">187</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">左撇子&右撇子</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
